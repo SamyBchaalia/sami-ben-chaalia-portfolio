@@ -1326,3 +1326,11 @@ section,
   font-weight: bold;
   padding: 10px 0;
 }
+.gsap-profile {
+  position: absolute;
+  max-width: 300px;
+}
+.profile-slideshow-container {
+  width: 300px;
+  height: 400px;
+}

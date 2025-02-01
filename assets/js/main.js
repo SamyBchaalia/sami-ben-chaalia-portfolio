@@ -24,9 +24,9 @@
     });
   });
   gsap.set(".gsap-img", { opacity: 0 });
-
-  function startSlideshow() {
-    let images = document.querySelectorAll(".gsap-img");
+  gsap.set(".gsap-profile", { opacity: 0 });
+  function startSlideshow(classnames, interval) {
+    let images = document.querySelectorAll(classnames);
     let currentIndex = 0;
 
     function fadeInOut() {
@@ -36,10 +36,11 @@
     }
 
     gsap.to(images[currentIndex], { opacity: 1, duration: 1 });
-    setInterval(fadeInOut, 3000);
+    setInterval(fadeInOut, interval);
   }
 
-  startSlideshow();
+  startSlideshow(".gsap-img", 3000);
+  startSlideshow(".gsap-profile", 6000);
 
   /**
    * Toggle mobile nav dropdowns
